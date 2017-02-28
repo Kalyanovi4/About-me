@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About me</title>
+        <link href="About_me.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <section id="first">
+            <h1>Education and courses</h1>
+            <p>My name is Mykola Kushnir, I'm 27 and I've graduated from Ternopil State Technical University in 2011 as a Computer Systems Analyst.<br>
+            Also I've finished online courses (JS, HTML/CSS) on <em>codeacademy.com</em> and JS and JQuery on <em>codeschool.com.</em></p>
+        </section>
+
+        <section id="second">
+            <h1>Personal skills</h1>
+            <p>My mother language is Ukrainian. But also I know English (<strong>Understanding:</strong> <em>listening</em> on level C1, <em>reading</em> on level B2;
+               <strong>Speaking:</strong> <em>spoken interaction</em> on level B2, <em>spoken production</em> on level B2; <strong>Writing:</strong> level B2)
+            <ul> Organisational / managerial skills:
+                <li>leadership (during 4 month was responsible for a team of 35 people);</li>
+                <li>perfectionist (want everything to be done well);</li>
+                <li>desire to learn.</li>
+            </ul>
+            Job-related skills: skills in Java Script, HTML, CSS; knowledge of English.
+            </p>
+        </section>
+
+        <script>
+            var arrejka =[9,8,7,6,5,4,3,2,1];
+
+            //Merge sort algorithm
+            function mergeSort(arr) {
+                if ( arr.length == 1 ) return arr;
+
+                var l = Math.round(arr.length/2);
+                var l1 = arr.slice(0, l);
+                var l2 = arr.slice(l);
+
+                l1 = mergeSort( l1 );
+                l2 = mergeSort( l2 );
+
+                return merge( l1, l2 )
+            }
+
+            function merge(a,b) {
+                var c = [];
+                while (a.length && b.length) {
+                    a[0] > b[0] ?  c.push(b.shift()) : c.push(a.shift());
+                }
+                while (a.length) {
+                    c.push(a.shift());
+                }
+                while (b.length) {
+                    c.push(b.shift());
+                }
+                return c;
+            }
+            console.log (mergeSort(arrejka));
+
+            //Bubble sort
+            function bubbleSort(arr) {
+                var swapped;
+                do {
+                    swapped = false;
+                    for (var i=0; i < arr.length-1; i++) {
+                        if (arr[i] > arr[i+1]) {
+                            var temp = arr[i];
+                            arr[i] = arr[i+1];
+                            arr[i+1] = temp;
+                            swapped = true;
+                        }
+                    }
+                } while (swapped);
+                return arr;
+            }
+
+            console.log(bubbleSort(arrejka));
+        </script>
+    </body>
+</html>

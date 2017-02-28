@@ -1,0 +1,22 @@
+body{
+    background-color: whitesmoke;
+}
+
+#first {
+    margin: 25px;
+    font-family: verdana;
+    font-size: 100%;
+}
+
+#second {
+    margin: 25px;
+    font-family: courier;
+    font-size: 100%;
+}
+
+#second ul {
+    padding: 30px;
+    font-family: Arial;
+    margin: 50px;
+    border: 1px solid lightgreen
+}
